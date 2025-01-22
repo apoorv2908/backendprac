@@ -7,7 +7,14 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+
+const corsOptions = {
+  origin: "https://frontendprac.vercel.app", // Allow requests from this frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions)); // Use CORS with your options
 app.use(bodyParser.json());
 
 // MongoDB Connection
