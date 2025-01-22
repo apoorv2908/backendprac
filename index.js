@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 
 const corsOptions = {
-  origin: "https://frontendprac.vercel.app", // Allow requests from this frontend domain
+  origin: "*", // Allow requests from this frontend domain
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
